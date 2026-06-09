@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Use @theme to define new theme variables and extend the default theme: */
+@theme {
+  --font-outfit: var(--font-outfit);
+  --font-dm-serif-display: var(--font-dm-serif-display);
+  --font-dm-mono: var(--font-dm-mono);
+  --color-base: #0a0a0b; /* Page background */
+  --color-surface: #0e0e10; /* Cards, panels */
+  --color-elevated: #111111; /* Stat cards, chips */
+  --color-primary: #5a8a6a; /* Accent green, CTAs, active states */
+  --color-primary-subtle: #0e1a11; /* Green-tinted backgrounds */
+  --color-primary-border: #2a3f30; /* Green-tinted borders */
+  --color-headline: #f2efe7; /* Headlines */
+  --color-body: #e8e6e0; /* Body text */
+  --color-muted: #888888; /* Supporting text */
+  --color-description: #666666; /* Descriptions */
+  --color-placeholder: #555555; /* Placeholders */
+  --color-card-body: #222222; /* Card borders */
+  --color-divider: #1a1a1c; /* Section dividers */
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-headline;
+  }
+
+  h1 {
+    @apply font-dm-serif-display text-5xl font-normal;
+  }
+
+  h2 {
+    @apply font-dm-mono text-primary text-xs font-normal tracking-widest uppercase;
+  }
+
+  h3 {
+    @apply font-dm-serif-display text-xl font-normal;
+  }
+
+  p {
+    @apply text-body font-dm-mono text-xs;
+  }
+
+  body {
+    @apply text-white;
+  }
+}
+
+/* @layer components {
+  .card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: --spacing(6);
+    box-shadow: var(--shadow-xl);
+  }
+} */
+
+/* .select2-results__group {
+  @apply text-lg font-bold text-gray-900;
+} */

@@ -1,23 +1,22 @@
 @import "tailwindcss";
 
-/* Use @theme to define new theme variables and extend the default theme: */
 @theme {
   --font-outfit: var(--font-outfit);
   --font-dm-serif-display: var(--font-dm-serif-display);
   --font-dm-mono: var(--font-dm-mono);
-  --color-base: #0a0a0b; /* Page background */
-  --color-surface: #0e0e10; /* Cards, panels */
-  --color-elevated: #111111; /* Stat cards, chips */
-  --color-primary: #5a8a6a; /* Accent green, CTAs, active states */
-  --color-primary-subtle: #0e1a11; /* Green-tinted backgrounds */
-  --color-primary-border: #2a3f30; /* Green-tinted borders */
+  --color-base: #060a07; /* Page background */
+  --color-surface: #0a0a0b; /* Cards, panels */
+  --color-elevated: #111113; /* Stat cards, chips */
+  --color-primary: #6bbf85; /* Accent green, CTAs, active states */
+  --color-primary-subtle: #0d1f13; /* Green-tinted backgrounds */
+  --color-primary-border: #2a4a35; /* Green-tinted borders */
   --color-headline: #f2efe7; /* Headlines */
   --color-body: #e8e6e0; /* Body text */
   --color-muted: #888888; /* Supporting text */
-  --color-description: #666666; /* Descriptions */
+  --color-description: #a8a49c; /* Descriptions */
   --color-placeholder: #555555; /* Placeholders */
-  --color-card-body: #222222; /* Card borders */
-  --color-divider: #1a1a1c; /* Section dividers */
+  --color-card-body: #222225; /* Card borders */
+  --color-divider: #1e1e20; /* Section dividers */
 }
 
 @layer base {
@@ -47,19 +46,85 @@
   }
 
   body {
-    @apply text-white;
+    @apply text-body;
+  }
+
+  section {
+    @apply border-b-divider border-b p-[60px_40px];
   }
 }
 
-/* @layer components {
-  .card {
-    background-color: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: --spacing(6);
-    box-shadow: var(--shadow-xl);
+@layer components {
+  .subtitle {
+    @apply font-dm-mono text-primary text-xs uppercase;
   }
-} */
+}
+.header {
+  @apply border-b-divider flex items-center justify-between border-b p-[16px_40px];
+}
 
-/* .select2-results__group {
-  @apply text-lg font-bold text-gray-900;
-} */
+.nav {
+  @apply m-0 flex gap-[28px] p-0;
+}
+
+.nav__list {
+  @apply font-outfit hover:text-primary hover:decoration-primary list-none text-sm text-[#a8a49c] underline decoration-transparent underline-offset-4 transition-all duration-300 ease-linear hover:underline;
+}
+
+.home__inner {
+  @apply bg-surface h-4/5 w-full max-w-5xl overflow-hidden rounded-2xl border shadow-xl/70 shadow;
+  border-color: #1e2420;
+}
+
+.chip {
+  @apply font-dm-mono inline-flex items-center justify-center gap-1.5 rounded-lg border p-[6px_11px] text-xs capitalize;
+}
+
+.chip--primary {
+  @apply text-primary border-primary-border bg-primary-subtle;
+}
+
+.chip--secondary {
+  @apply text-description border-card-body bg-elevated;
+}
+
+.chip__dot {
+  @apply bg-primary h-[5px] w-[5px] rounded-[50%];
+  animation: pulse 2s infinite;
+}
+
+.statscard {
+  @apply bg-elevated border-card-body rounded-xl border p-[13px_16px] text-right;
+}
+
+.statscard__title {
+  @apply font-dm-serif-display text-2xl leading-[1];
+}
+
+.statscard__desc {
+  @apply font-outfit text-description mt-[3px];
+}
+
+.button {
+  @apply font-outfit cursor-pointer rounded-lg border-0 p-[10px_20px] text-xs font-bold;
+}
+
+.button--primary {
+  @apply bg-primary text-[#0a0f0c];
+}
+
+.button--secondary {
+  @apply text-description border border-[#2a2a2e] bg-transparent;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}

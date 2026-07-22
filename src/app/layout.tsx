@@ -25,7 +25,7 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${dmSerifDisplay.variable} ${dmMono.variable} h-full w-full`}
     >
-      <body className="bg-base flex h-full w-full items-center justify-center">
+      <body className="bg-base-gradient flex h-full w-full items-center justify-center">
         {children}
       </body>
     </html>

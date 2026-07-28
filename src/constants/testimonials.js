@@ -1,0 +1,71 @@
+export const TESTIMONIAL_DATA = [
+  {
+    data: "I worked with Zohaib for more than 3 years on 4 different projects. The value that Zohaib brings to the team is not limited to his technical knowledge - which he is very strong at. He brings clarity to the requirements by asking good questions, adds scalability by providing input in the way application will be structured and learns quickly when new challenges arrive.",
+    name: "Khurram Zafar",
+    company: "Afiniti",
+    designation: "Engineering Manager",
+    url: "https://www.linkedin.com/in/khurram-zafar/",
+  },
+  {
+    data: "I worked with Zohaib across several projects, and he's one of the most versatile frontend professionals I've come across. He led the design system effort for our product suite, bringing a rare combination of strong UI/UX instincts and real engineering depth. What made Zohaib stand out wasn't just his design sense — it was his ability to actually build. He could dive into existing features, understand the codebase, and extend it himself, without needing a separate engineer to translate his designs into working code. That full-stack design-to-engineering skill set made him incredibly valuable across every project we worked on together. He's thoughtful, collaborative, and genuinely elevates the quality of whatever product he touches. I'd strongly recommend Zohaib to any team looking for someone who can own both the design and the implementation.",
+    name: "Ehsun Shahid",
+    company: "Afiniti",
+    designation: "Engineering Lead",
+    url: "https://www.linkedin.com/in/ehsunshahid/",
+  },
+  {
+    data: "I had the pleasure of working with Zohaib and can confidently say he is a great team player and a highly dependable professional. He consistently handled tasks with great attention to detail and always delivered quality work on time to meet project deadlines.",
+    name: "Irfan Shah",
+    company: "Afiniti",
+    designation: "Head of UX",
+    url: "https://www.linkedin.com/in/ishahkhan/",
+  },
+  {
+    data: "Working with Zohaib has genuinely been one of the highlights of my time here. What stands out most is how he approaches tough, tangled problems — always with a level head and a real focus on what's practical rather than just theoretical. He communicates clearly, thinks a few steps ahead, and never hesitates to jump in and clear a path for the rest of the team when things get stuck. On top of that, he does what he says he'll do — if he commits to something, you can count on it being done. Between his dependability, his technical depth, and the way he brings people together, he's someone I recommend without reservation.",
+    name: "Salman Orak",
+    company: "Afiniti",
+    designation: "Expert Software Engineer",
+    url: "https://www.linkedin.com/in/salmanorak/",
+  },
+  {
+    data: "I had the pleasure of working with Zohaib at Afiniti, and he’s an exceptional UI/UX developer. His skills in HTML, CSS, SASS, JavaScript, React, and Next.js are very impressive, and he brings a great balance of design sensibility and technical expertise. He’s especially strong in creating accessible, responsive interfaces and always keeps user experience front and center. A great team player with a keen eye for detail and pixel perfect conversion of design to markup. ",
+    name: "Muzamil Abbas",
+    company: "Afiniti",
+    designation: "Staff Software Engineer",
+    url: "https://www.linkedin.com/in/muzamilabbas/",
+  },
+  {
+    data: "I had the pleasure of working with Zohaib at Afiniti. He consistently transformed our design mocks into high-quality, pixel-perfect interfaces while ensuring seamless UX alignment with the backend team. A true professional, Zohaib takes ownership of his work, provides UX suggestions, meets deadlines with precision, and collaborates effortlessly, making him an invaluable team player. Beyond his expertise, he’s also a friendly and approachable colleague to work with.",
+    name: "Kapil Kumar",
+    company: "Afiniti",
+    designation: "Lead Product Designer",
+    url: "https://www.linkedin.com/in/kapil-kumar-319ab9111/",
+  },
+  {
+    data: "I had the pleasure of working with Zohaib, and I can confidently say he is a skilled and dedicated developer. He consistently deliver high-quality work, has strong problem-solving abilities, and is always willing to support the team when needed. Zohaib’s technical expertise, professionalism, and positive attitude make him a valuable asset to any organization. I would highly recommend him to anyone looking for a reliable and talented developer.",
+    name: "Abeer Jalil",
+    company: "Afiniti",
+    designation: "Lead Product Designer",
+    url: "https://www.linkedin.com/in/abeer-jalil-2970a8146/",
+  },
+  {
+    data: "I had the pleasure of working with Zohaib Ashraf at Afiniti, where he served as a Lead Software Engineer. He consistently demonstrated strong problem-solving skills and a practical, solution-oriented mindset, especially when handling complex technical challenges. He is highly skilled at leveraging modern AI tools to improve development workflows, accelerate delivery, and enhance overall engineering efficiency. Beyond his technical expertise, he is collaborative, supportive, and always willing to help the team move forward. I truly enjoyed working with him and would confidently recommend him to any organization looking for a capable engineering leader with strong technical depth and adaptability.",
+    name: "Ahsan Tanveer",
+    company: "Afiniti",
+    designation: "Senior Software Engineer",
+    url: "https://www.linkedin.com/in/ahsan-tanveer-436467194/",
+  },
+];
+
+export const avatarColors = [
+  "#2A4A35",
+  "#2D3E4F",
+  "#4A3A4F",
+  "#3A5A45",
+  "#4A4535",
+  "#3A4A5A",
+  "#5A3A45",
+  "#3A5A5A",
+  "#5A4A3A",
+  "#3A4A4A",
+];

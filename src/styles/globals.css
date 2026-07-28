@@ -22,7 +22,7 @@
   --color-description: #a8a49c; /* Descriptions */
   --color-placeholder: #555555; /* Placeholders */
   --color-card-body: #222225; /* Card borders */
-  --color-divider: #1e1e20; /* Section dividers */
+  --color-divider: #1e1e22; /* Section dividers */
 }
 
 @layer base {
@@ -57,6 +57,14 @@
 
   section {
     @apply border-b-divider border-b p-[60px_40px];
+  }
+
+  blockquote p::before {
+    content: "\201C";
+  }
+
+  blockquote p::after {
+    content: "\201D";
   }
 
   footer {
@@ -141,6 +149,59 @@
 
 .statscard__desc {
   @apply font-outfit text-description mt-[3px];
+}
+
+.embla {
+  --slide-spacing: 1rem;
+  --slide-size: 50%;
+}
+
+.embla__viewport {
+  @apply overflow-hidden;
+}
+
+.embla__container {
+  @apply flex touch-pan-y touch-pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  @apply min-w-0 shrink-0 grow-0 basis-[var(--slide-size)] cursor-pointer pl-[var(--slide-spacing)] select-none;
+  transform: translate3d(0, 0, 0);
+}
+
+.embla__dots {
+  @apply mt-[20px] flex flex-wrap items-center justify-center gap-1.5;
+}
+
+.embla__dot {
+  @apply bg-card-body h-[12px] w-[12px] origin-center cursor-pointer rounded-full transition-all;
+}
+
+.embla__dot--selected {
+  @apply bg-primary w-[25px];
+}
+
+.embla__side {
+  @apply absolute z-[1] h-full w-40;
+}
+
+.embla__side--left {
+  @apply left-0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 11, 1) 0%,
+    rgba(250, 250, 247, 0) 100%
+  );
+}
+
+.embla__side--right {
+  @apply top-0 right-0;
+  background: linear-gradient(
+    270deg,
+    rgba(10, 10, 11, 1) 0%,
+    rgba(250, 250, 247, 0) 100%
+  );
 }
 
 @keyframes pulse {

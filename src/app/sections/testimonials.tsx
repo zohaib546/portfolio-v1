@@ -1,7 +1,11 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { avatarColors, TESTIMONIAL_DATA } from "./../../constants/testimonials";
+import {
+  AVATAR_BG_COLORS,
+  PROFILE_RECOMMENDATION_URL,
+  TESTIMONIAL_DATA,
+} from "./../../constants/testimonials";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const Testimonials = () => {
@@ -29,28 +33,35 @@ const Testimonials = () => {
                         {testimonial.data}
                       </p>
                       <a
-                        href={testimonial.url}
+                        target="_blank"
+                        href={PROFILE_RECOMMENDATION_URL}
                         className="text-primary font-dm-serif-display flex items-center"
                       >
                         Read More <FiArrowUpRight fontSize={18} />
                       </a>
                     </blockquote>
-                    <figcaption className="flex gap-2.5">
-                      <div
-                        className="font-dm-mono flex h-10 w-10 shrink-0 items-center justify-center rounded-[50%] text-xs text-white uppercase"
-                        style={{ backgroundColor: avatarColors[index] }}
-                        aria-hidden="true"
+                    <figcaption>
+                      <a
+                        target="_blank"
+                        className="flex gap-2.5"
+                        href={testimonial.profileUrl}
                       >
-                        {getInitials(testimonial.name)}
-                      </div>
-                      <div className="flex flex-col gap-1">
-                        <cite className="text-description font-outfit text-sm not-italic">
-                          {testimonial.name}
-                        </cite>
-                        <span className="text-description font-outfit text-xs text-[#727272]">
-                          {testimonial.designation} · {testimonial.company}
-                        </span>
-                      </div>
+                        <div
+                          className="font-dm-mono flex h-10 w-10 shrink-0 items-center justify-center rounded-[50%] text-xs text-white uppercase"
+                          style={{ backgroundColor: AVATAR_BG_COLORS[index] }}
+                          aria-hidden="true"
+                        >
+                          {getInitials(testimonial.name)}
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <cite className="text-description font-outfit text-sm not-italic">
+                            {testimonial.name}
+                          </cite>
+                          <span className="text-description font-outfit text-xs text-[#727272]">
+                            {testimonial.designation} · {testimonial.company}
+                          </span>
+                        </div>
+                      </a>
                     </figcaption>
                   </figure>
                 </div>

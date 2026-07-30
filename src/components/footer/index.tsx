@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
 import { HiOutlineMail } from "react-icons/hi";
-import Button from "./../button/button";
+import Button from "../button";
 import { MdArrowUpward } from "react-icons/md";
 
 const Footer = () => {

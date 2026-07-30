@@ -1,4 +1,12 @@
-export const TESTIMONIAL_DATA = [
+export interface ITestimonial {
+  data: string;
+  name: string;
+  profileUrl: string;
+  company: string;
+  designation: string;
+}
+
+export const TESTIMONIAL_DATA: ITestimonial[] = [
   {
     data: "I worked with Zohaib for more than 3 years on 4 different projects. The value that Zohaib brings to the team is not limited to his technical knowledge - which he is very strong at. He brings clarity to the requirements by asking good questions, adds scalability by providing input in the way application will be structured and learns quickly when new challenges arrive.",
     name: "Khurram Zafar",

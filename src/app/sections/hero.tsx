@@ -1,7 +1,7 @@
 "use client";
 
-import Button from "@/components/button/button";
-import StatsCard from "@/components/cards/stats/stats";
+import Button from "@/components/button";
+import StatsCard from "@/components/cards/stats";
 import { LuDownload } from "react-icons/lu";
 
 const Hero = () => {

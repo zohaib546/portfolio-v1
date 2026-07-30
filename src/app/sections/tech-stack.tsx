@@ -1,4 +1,4 @@
-import Chip from "@/components/chip/chip";
+import Chip from "@/components/chip";
 
 const TechStack = () => {
   return (

@@ -1,5 +1,5 @@
-import Header from "@/components/header/header";
-import Footer from "./../components/footer/footer";
+import Header from "@/components/header";
+import Footer from "../components/footer";
 import Hero from "./sections/hero";
 import TechStack from "./sections/tech-stack";
 import Testimonials from "./sections/testimonials";

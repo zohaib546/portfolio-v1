@@ -23,11 +23,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${dmSerifDisplay.variable} ${dmMono.variable} h-full w-full`}
+      className={`${outfit.variable} ${dmSerifDisplay.variable} ${dmMono.variable} h-full w-full scroll-smooth`}
     >
-      <body className="bg-base-gradient flex h-full w-full items-center justify-center">
-        {children}
-      </body>
+      <body className="h-full w-full">{children}</body>
     </html>
   );
 }

@@ -21,22 +21,22 @@ const ExperienceList = ({
         <h4 className="text-md font-outfit font-medium text-[#f0ede6]">
           {companyName}
         </h4>
-        {index === 0 && <Chip label={location} size="xs" variant="primary" />}
-        <span className="font-dm-mono text-description mt-0.5 text-xs">
+        {index === 0 && <Chip label={location} size="sm" variant="primary" />}
+        <span className="font-dm-mono text-placeholder mt-0.5 text-xs">
           {duration}
         </span>
       </div>
       <div>
-        <h5 className="text-primary font-outfit my-1.5 text-xs font-medium">
+        <h5 className="text-primary font-dm-mono my-1.5 text-xs font-medium">
           {role}
         </h5>
         <ul className="mb-5 space-y-1.5">
           {contributions.map((contribution, index) => (
             <li
               key={index}
-              className="text-description font-outfit flex items-center gap-2 text-xs"
+              className="text-description font-outfit flex items-center gap-2 text-sm"
             >
-              <GoArrowRight />
+              <GoArrowRight className="text-placeholder" />
               {contribution}
             </li>
           ))}

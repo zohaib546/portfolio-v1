@@ -15,7 +15,7 @@ const Hero = () => {
           I craft <br /> <em className="text-primary">Interfaces</em> <br />{" "}
           that scale
         </h1>
-        <p className="font-outfit text-description max-w-[500px] text-sm/7">
+        <p className="font-outfit text-description max-w-[500px] text-sm/6">
           5+ years building production-grade React & Next.js apps — from
           pixel-perfect design systems to cloud-native Azure backends. I turn
           complex requirements into clean, maintainable code.

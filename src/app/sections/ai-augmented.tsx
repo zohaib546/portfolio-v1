@@ -16,7 +16,7 @@ const AiAugmented = () => {
           <h4 className="font-outfit mb-1 text-sm font-medium text-[#A0BBCC]">
             AI-first SDLC practitioner
           </h4>
-          <p className="font-outfit text-[#6A8899]">
+          <p className="font-outfit text-sm/5 text-[#6A8899]">
             Integrates ChatGPT, Claude, Cursor, and GitHub Copilot into daily
             engineering — code generation, debugging, PR reviews, and
             documentation. AI-first principles applied without sacrificing

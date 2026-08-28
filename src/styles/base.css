@@ -1,0 +1,46 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-headline;
+  }
+
+  h1 {
+    @apply font-dm-serif-display text-5xl font-normal;
+  }
+
+  h2 {
+    @apply font-dm-mono text-primary text-xs font-normal tracking-widest uppercase;
+  }
+
+  h3 {
+    @apply font-dm-serif-display text-2xl font-normal;
+  }
+
+  p {
+    @apply text-body font-dm-mono text-xs;
+  }
+
+  body {
+    @apply text-body;
+  }
+
+  section {
+    @apply border-b-divider border-b p-[60px_30px_60px_40px];
+  }
+
+  blockquote p::before {
+    content: "\201C";
+  }
+
+  blockquote p::after {
+    content: "\201D";
+  }
+
+  footer {
+    @apply p-[60px_40px];
+  }
+}

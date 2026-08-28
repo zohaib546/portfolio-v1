@@ -1,22 +1,22 @@
-import type { MouseEventHandler, ReactNode } from "react";
+import type { ReactNode } from "react";
 
-interface IButton {
+interface ILinkButton {
   variant: "primary" | "secondary";
   endIcon?: ReactNode;
   startIcon?: ReactNode;
   children: ReactNode;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
   className?: string;
+  href: string;
 }
 
-const Button = ({
-  onClick,
+const LinkButton = ({
   variant,
   startIcon,
   endIcon,
   children,
   className = "",
-}: IButton) => {
+  href,
+}: ILinkButton) => {
   const classes = {
     primary: "button button--primary",
     secondary: "button button--secondary",
@@ -31,10 +31,10 @@ const Button = ({
     </>
   );
   return (
-    <button className={classNames} onClick={onClick}>
+    <a href={href} className={classNames}>
       {content}
-    </button>
+    </a>
   );
 };
 
-export default Button;
+export default LinkButton;

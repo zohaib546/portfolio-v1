@@ -2,7 +2,8 @@
 
 import Button from "@/components/button";
 import StatsCard from "@/components/cards/stats";
-import { LuDownload } from "react-icons/lu";
+import LinkButton from "@/components/link-button";
+import { LuArrowRight, LuDownload } from "react-icons/lu";
 
 const Hero = () => {
   return (
@@ -21,9 +22,13 @@ const Hero = () => {
           complex requirements into clean, maintainable code.
         </p>
         <div className="flex gap-3">
-          <Button variant="primary" onClick={(e) => console.log(e)}>
+          <LinkButton
+            variant="primary"
+            href="#projects"
+            endIcon={<LuArrowRight />}
+          >
             View My Work
-          </Button>
+          </LinkButton>
           <Button
             variant="secondary"
             onClick={(e) => console.log(e)}

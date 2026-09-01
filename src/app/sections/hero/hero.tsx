@@ -7,8 +7,8 @@ import { LuArrowRight, LuDownload } from "react-icons/lu";
 
 const Hero = () => {
   return (
-    <section id="hero" className="flex justify-between gap-5">
-      <div className="flex flex-col gap-6">
+    <section id="hero" className="flex items-center gap-5">
+      <div className="flex basis-[65%] flex-col gap-6">
         <h2 className="subtitle">
           Senior Full-Stack Engineer · Frontend Specialist
         </h2>
@@ -38,7 +38,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className="flex shrink-0 flex-col gap-3 self-end">
+      <div className="flex basis-[35%] flex-col gap-4">
         <StatsCard title="5+" description="years experience" />
         <StatsCard title="100%" description="WCAG AA delivered" />
         <StatsCard title="40%" description="dev efficiency gain" />

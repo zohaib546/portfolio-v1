@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface IChip {
   label: string;
   isOnline?: boolean;
-  variant: "primary" | "secondary";
+  variant: "primary" | "secondary" | "primaryShadow";
   size?: "normal" | "sm" | "xs";
   iconStart?: ReactNode;
 }
@@ -20,6 +20,7 @@ const Chip = ({
 
   const chipVariantClasses = {
     primary: "chip chip--primary",
+    primaryShadow: "chip chip--primary-shadow",
     secondary: "chip chip--secondary",
   };
 
@@ -29,8 +30,10 @@ const Chip = ({
     xs: "chip chip--size-xs",
   };
 
+  const className = `${chipVariantClasses[variant]} ${chipSizeClasses[size]}`;
+
   return (
-    <div className={`${chipVariantClasses[variant]} ${chipSizeClasses[size]}`}>
+    <div className={className}>
       {onlineDot}
       {iconAtStart}
       {label}

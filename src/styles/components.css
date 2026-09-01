@@ -1,6 +1,14 @@
 @layer components {
   .header {
-    @apply border-card-body flex items-center justify-between border-b p-[16px_40px];
+    @apply flex items-center justify-between border-b border-transparent p-[26px_40px];
+    border-image: linear-gradient(
+        90deg,
+        var(--color-primary-border),
+        rgba(42, 74, 53, 0),
+        var(--color-primary-border)
+      )
+      1;
+    background: linear-gradient(180deg, rgba(42, 74, 53, 0.05), transparent);
   }
 
   .nav {
@@ -11,43 +19,110 @@
     @apply font-outfit hover:text-primary hover:decoration-primary list-none text-sm text-[#a8a49c] underline decoration-transparent underline-offset-4 transition-all duration-300 ease-linear hover:underline;
   }
 
+  .home__outer {
+    @apply relative;
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: -40%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(
+        circle,
+        rgba(107, 191, 133, 0.05) 0%,
+        transparent 70%
+      );
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: fixed;
+      bottom: -30%;
+      left: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(
+        circle,
+        rgba(107, 191, 133, 0.03) 0%,
+        transparent 70%
+      );
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
   .home__inner {
-    @apply bg-surface relative flex h-4/5 w-full max-w-5xl flex-col overflow-hidden rounded-2xl border shadow-xl/70 shadow;
+    @apply relative flex h-4/5 w-full max-w-5xl flex-col overflow-hidden rounded-2xl border;
     border-color: #1e2420;
+    background: linear-gradient(135deg, #0a0a0b 0%, #0d0f0c 50%, #0a0c09 100%);
+    box-shadow:
+      0 0 0 0.5px rgba(107, 191, 133, 0.08),
+      0 12px 48px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(107, 191, 133, 0.04);
   }
 
   .home__main {
-    @apply scrollbar-thumb-surface flex-1 scrollbar-thin scrollbar-track-transparent overflow-auto scroll-smooth transition-all duration-200 hover:scrollbar-thumb-[#1e2420];
+    @apply relative z-[2] flex-1 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent overflow-auto overflow-x-hidden scroll-smooth transition-all duration-200 hover:scrollbar-thumb-[#1e2420];
   }
 
+  .overlay-element {
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(107, 191, 133, 0.04) 0%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+  }
   .statscard {
-    @apply bg-elevated border-card-body rounded-xl border p-[13px_16px] text-right;
+    @apply border-primary-border rounded-xl border p-[16px] text-center backdrop-blur-sm;
+    background: linear-gradient(
+      135deg,
+      rgba(13, 13, 15, 0.8),
+      rgba(13, 31, 19, 0.3)
+    );
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(107, 191, 133, 0.05);
   }
 
   .statscard__title {
-    @apply font-dm-serif-display text-2xl leading-[1];
+    @apply font-dm-serif-display text-3xl text-[#f0ede6];
   }
 
   .statscard__desc {
-    @apply font-outfit text-description mt-[3px] text-sm;
+    @apply font-outfit mt-[6px] text-sm text-[#7a766e];
   }
 
   .subtitle {
     @apply font-dm-mono text-primary text-xs tracking-widest uppercase;
   }
 
-  .button,
-  .link {
-    @apply font-dm-mono flex cursor-pointer items-center gap-1.5 rounded-lg border-0 p-[10px_20px] text-xs font-medium capitalize;
+  .button {
+    @apply font-dm-mono flex cursor-pointer items-center gap-1.5 rounded-lg border-0 p-[12px_20px] text-xs font-medium capitalize;
   }
 
-  .button--primary,
-  .link--primary {
-    @apply bg-primary hover:bg-primary-hover active:bg-primary-active text-[#0a0f0c] transition-all duration-200 ease-linear;
+  .button--primary {
+    @apply bg-primary active:bg-primary-active text-[#0a0f0c] transition-all duration-200 ease-linear;
+    box-shadow: 0 4px 16px rgba(107, 191, 133, 0.2);
+    &:hover {
+      box-shadow: 0 8px 24px rgba(107, 191, 133, 0.3);
+    }
   }
 
   .button--secondary {
-    @apply text-description active:border-primary-hover active:text-primary-hover border border-[#2a2a2e] bg-transparent transition-all duration-200 ease-linear hover:border-[#6BBF85] hover:bg-[rgba(107,191,133,0.08)] hover:text-[#6BBF85];
+    @apply text-description active:border-primary-hover active:text-primary-hover border-primary-border border bg-transparent transition-all duration-200 ease-linear hover:border-[#6BBF85] hover:bg-[rgba(107,191,133,0.08)] hover:text-[#6BBF85];
   }
 
   .chip {
@@ -61,6 +136,12 @@
 
   .chip--primary {
     @apply text-primary border-primary-border bg-primary-subtle;
+  }
+
+  .chip--primary-shadow {
+    @apply text-primary border-primary-border;
+    background: linear-gradient(135deg, #0d1f13, #0a140d);
+    box-shadow: 0 2px 8px rgba(107, 191, 133, 0.1);
   }
 
   .chip--secondary {

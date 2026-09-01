@@ -1,12 +1,22 @@
 "use client";
 import useEmblaCarousel from "embla-carousel-react";
+import autoScroll from "embla-carousel-auto-scroll";
 import DotButton from "@/components/dot-button";
 import TestimonialCard from "@/components/testimonial-card";
 import { TESTIMONIAL_DATA } from "@/constants/testimonials";
 import { useDotButton } from "@/hooks/useDotButton";
 
 const Testimonials = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+    },
+    [
+      autoScroll({
+        speed: 0.4,
+      }),
+    ],
+  );
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
@@ -27,6 +37,7 @@ const Testimonials = () => {
                   key={index}
                   testimonialData={testimonial}
                   avatarIndex={index}
+                  emblaApi={emblaApi}
                 />
               ))}
             </div>

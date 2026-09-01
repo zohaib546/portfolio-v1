@@ -41,6 +41,6 @@
   }
 
   footer {
-    @apply p-[60px_40px];
+    @apply py-[60px];
   }
 }

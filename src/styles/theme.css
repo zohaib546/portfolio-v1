@@ -1,0 +1,24 @@
+@theme {
+  --font-outfit: var(--font-outfit);
+  --font-dm-serif-display: var(--font-dm-serif-display);
+  --font-dm-mono: var(--font-dm-mono);
+  --color-base: radial-gradient(
+    circle,
+    hsla(140, 41%, 8%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 100%
+  ); /* Page background */
+  --color-surface: #0a0a0b; /* Cards, panels */
+  --color-elevated: #111113; /* Stat cards, chips */
+  --color-primary: #6bbf85; /* Accent green, CTAs, active states */
+  --color-primary-hover: #52a872;
+  --color-primary-active: #3a8a5c;
+  --color-primary-subtle: #0d1f13; /* Green-tinted backgrounds */
+  --color-primary-border: #2a4a35; /* Green-tinted borders */
+  --color-headline: #f2efe7; /* Headlines */
+  --color-body: #e8e6e0; /* Body text */
+  --color-muted: #888888; /* Supporting text */
+  --color-description: #a8a49c; /* Descriptions */
+  --color-placeholder: #555555; /* Placeholders */
+  --color-card-body: #222225; /* Card borders */
+  --color-divider: #1e1e22; /* Section dividers */
+}

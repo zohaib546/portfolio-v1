@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { outfit, dmSerifDisplay, dmMono } from "@/fonts";
+import { outfit, dmSerifDisplay, dmMono } from "@/config/fonts";
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${dmSerifDisplay.variable} ${dmMono.variable} h-full w-full scroll-smooth`}
+      className={`${outfit.variable} ${dmSerifDisplay.variable} ${dmMono.variable} h-full w-full`}
     >
-      <body className="h-full w-full">{children}</body>
+      <body className="h-full w-full bg-[#060A07]">{children}</body>
     </html>
   );
 }

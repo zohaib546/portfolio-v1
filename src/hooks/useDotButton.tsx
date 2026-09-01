@@ -8,6 +8,15 @@ export const useDotButton = (emblaApi: EmblaCarouselType | undefined) => {
   const onDotButtonClick = useCallback(
     (index: number) => {
       if (!emblaApi) return;
+      const autoScroll = emblaApi.plugins()?.autoScroll;
+      if (autoScroll) {
+        autoScroll.stop();
+        const resume = () => {
+          autoScroll.play?.();
+          emblaApi.off("select", resume);
+        };
+        emblaApi.on("select", resume);
+      }
       emblaApi.scrollTo(index);
     },
     [emblaApi],

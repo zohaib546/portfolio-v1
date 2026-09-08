@@ -5,16 +5,16 @@ interface ILink {
 
 export const NAVLINKS: ILink[] = [
   {
-    route: "/work",
-    name: "Work",
-  },
-  {
-    route: "#stack",
+    route: "#techstack",
     name: "Stack",
   },
   {
     route: "#experience",
     name: "Experience",
+  },
+  {
+    route: "#projects",
+    name: "Projects",
   },
   {
     route: "#contact",

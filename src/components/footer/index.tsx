@@ -16,7 +16,7 @@ const SOCIAL_ICONS: Record<string, ReactNode> = {
 
 const Footer = () => {
   return (
-    <footer id="footer" className="">
+    <footer id="contact">
       <div className="flex justify-between px-[40px] pb-[40px]">
         <div>
           <div className="flex flex-col gap-2">
@@ -60,18 +60,10 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="border-t-divider mx-[40px] flex items-center justify-between border-t pt-[40px]">
+      <div className="border-t-divider mx-[40px] flex items-center justify-between justify-center border-t pt-[40px]">
         <p className="font-dm-mono text-center text-xs text-[#5e5e5e]">
           &copy; {new Date().getFullYear()} All Rights Reserved
         </p>
-        <LinkButton
-          href="#hero"
-          variant="primary"
-          className="justify-center"
-          startIcon={<MdArrowUpward />}
-        >
-          Back to Top
-        </LinkButton>
       </div>
     </footer>
   );

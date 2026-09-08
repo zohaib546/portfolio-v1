@@ -1,6 +1,6 @@
 @layer components {
   .header {
-    @apply flex items-center justify-between border-b border-transparent p-[26px_40px];
+    @apply flex items-center justify-between border-b border-transparent p-[22px_40px];
     border-image: linear-gradient(
         90deg,
         var(--color-primary-border),
@@ -12,11 +12,29 @@
   }
 
   .nav {
-    @apply m-0 flex gap-[28px] p-0;
+    @apply m-0 flex gap-2 rounded-xl border border-[#1e2420] p-[6px_8px];
+    background: linear-gradient(
+        90deg,
+        var(--color-primary-border),
+        #2a4a3500,
+        var(--color-primary-border)
+      )
+      1;
   }
 
-  .nav__list {
-    @apply font-outfit hover:text-primary hover:decoration-primary list-none text-sm text-[#a8a49c] underline decoration-transparent underline-offset-4 transition-all duration-300 ease-linear hover:underline;
+  .nav__item {
+    @apply flex list-none items-center;
+  }
+
+  .nav__link {
+    @apply font-outfit hover:text-primary rounded-lg p-[5px_12px] text-xs tracking-[1px] text-[#a8a49c] decoration-0 transition-all duration-200 ease-in;
+  }
+  .nav__link--active {
+    @apply text-surface;
+    background: linear-gradient(135deg, #6bbf85, #52a872);
+  }
+  .nav__link--active:hover {
+    @apply text-surface;
   }
 
   .home__outer {
@@ -68,7 +86,7 @@
   }
 
   .home__main {
-    @apply relative z-[2] flex-1 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent overflow-auto overflow-x-hidden scroll-smooth transition-all duration-200 hover:scrollbar-thumb-[#1e2420];
+    @apply relative z-[2] mr-[-9px] flex-1 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent overflow-auto overflow-x-hidden scroll-smooth transition-all duration-200 hover:scrollbar-thumb-[#1e2420];
   }
 
   .overlay-element {
@@ -161,7 +179,7 @@
   }
 
   .scroll-cue {
-    @apply pointer-events-none absolute top-2/4 right-3 flex -translate-y-2/4 flex-col items-center gap-1;
+    @apply pointer-events-none absolute top-2/4 right-2 z-10 flex -translate-y-2/4 flex-col items-center gap-1;
   }
 
   .scroll-cue__track {

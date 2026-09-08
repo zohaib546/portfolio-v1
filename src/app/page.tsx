@@ -18,8 +18,8 @@ export default function HomePage() {
           <Hero />
           <TechStack />
           <AiAugmented />
-          <Projects />
           <Experience />
+          <Projects />
           <Testimonials />
           <Footer />
         </HomeMain>

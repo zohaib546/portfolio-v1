@@ -16,6 +16,7 @@ const Button = ({
   endIcon,
   children,
   className = "",
+  ...props
 }: IButton) => {
   const classes = {
     primary: "button button--primary",
@@ -31,7 +32,7 @@ const Button = ({
     </>
   );
   return (
-    <button className={classNames} onClick={onClick}>
+    <button className={classNames} onClick={onClick} {...props}>
       {content}
     </button>
   );

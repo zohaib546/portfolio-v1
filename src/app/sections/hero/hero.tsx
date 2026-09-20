@@ -3,11 +3,18 @@
 import Button from "@/components/button";
 import StatsCard from "@/components/cards/stats";
 import LinkButton from "@/components/link-button";
-import { LuArrowRight, LuDownload } from "react-icons/lu";
+import { Dispatch, SetStateAction } from "react";
+import { LuArrowRight } from "react-icons/lu";
 
-const Hero = () => {
+const Hero = ({
+  onClick,
+  isAssistantVisisble,
+}: {
+  isAssistantVisisble: boolean;
+  onClick: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
-    <section id="hero" className="flex items-center gap-5">
+    <section id="hero" className="flex items-center gap-15">
       <div className="flex basis-[65%] flex-col gap-6">
         <h2 className="subtitle">
           Senior Full-Stack Engineer · Frontend Specialist
@@ -31,10 +38,13 @@ const Hero = () => {
           </LinkButton>
           <Button
             variant="secondary"
-            onClick={(e) => console.log(e)}
-            endIcon={<LuDownload />}
+            className={isAssistantVisisble ? "button--secondary-active" : ""}
+            onClick={(e) => onClick((state) => !state)}
+            endIcon={<span className="text-sm">🤖</span>}
+            aria-expanded={isAssistantVisisble}
+            aria-controls="assistant-sidebar"
           >
-            Download CV
+            Ask Assistant
           </Button>
         </div>
       </div>

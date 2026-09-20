@@ -12,14 +12,7 @@
   }
 
   .nav {
-    @apply m-0 flex gap-2 rounded-xl border border-[#1e2420] p-[6px_8px];
-    background: linear-gradient(
-        90deg,
-        var(--color-primary-border),
-        #2a4a3500,
-        var(--color-primary-border)
-      )
-      1;
+    @apply m-0 flex rounded-xl;
   }
 
   .nav__item {
@@ -27,7 +20,7 @@
   }
 
   .nav__link {
-    @apply font-outfit hover:text-primary rounded-lg p-[5px_12px] text-xs tracking-[1px] text-[#a8a49c] decoration-0 transition-all duration-200 ease-in;
+    @apply font-outfit hover:text-primary rounded-lg p-[4px_11px] text-[13px] tracking-[0.5px] text-[#a8a49c] decoration-0 transition-all duration-200 ease-in;
   }
   .nav__link--active {
     @apply text-surface;
@@ -76,8 +69,7 @@
   }
 
   .home__inner {
-    @apply relative flex h-4/5 w-full max-w-5xl flex-col overflow-hidden rounded-2xl border;
-    border-color: #1e2420;
+    @apply flex h-4/5 w-full max-w-5xl rounded-2xl border border-[#1e2420];
     background: linear-gradient(135deg, #0a0a0b 0%, #0d0f0c 50%, #0a0c09 100%);
     box-shadow:
       0 0 0 0.5px rgba(107, 191, 133, 0.08),
@@ -86,7 +78,7 @@
   }
 
   .home__main {
-    @apply relative z-[2] mr-[-9px] flex-1 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent overflow-auto overflow-x-hidden scroll-smooth transition-all duration-200 hover:scrollbar-thumb-[#1e2420];
+    @apply relative z-[2] flex-1 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent overflow-auto overflow-x-hidden scroll-smooth transition-all duration-200 hover:scrollbar-thumb-[#2a4a35];
   }
 
   .overlay-element {
@@ -140,7 +132,11 @@
   }
 
   .button--secondary {
-    @apply text-description active:border-primary-hover active:text-primary-hover border-primary-border border bg-transparent transition-all duration-200 ease-linear hover:border-[#6BBF85] hover:bg-[rgba(107,191,133,0.08)] hover:text-[#6BBF85];
+    @apply text-primary active:border-primary-hover active:text-primary-hover border-primary-border hover:border-primary border bg-transparent transition-all duration-200 ease-linear hover:bg-[rgba(107,191,133,0.08)];
+  }
+
+  .button--secondary-active {
+    @apply border-primary-hover text-primary-hover bg-[rgba(107,191,133,0.08)] shadow-[0_8px_24px_rgba(107,191,133,0.25)];
   }
 
   .chip {
@@ -179,7 +175,7 @@
   }
 
   .scroll-cue {
-    @apply pointer-events-none absolute top-2/4 right-2 z-10 flex -translate-y-2/4 flex-col items-center gap-1;
+    @apply pointer-events-none absolute top-2/4 right-3 z-10 flex -translate-y-2/4 flex-col items-center gap-1;
   }
 
   .scroll-cue__track {
@@ -208,5 +204,72 @@
     color: var(--color-placeholder);
     letter-spacing: 0.1em;
     writing-mode: vertical-rl;
+  }
+
+  .animate-cursor {
+    animation: blink 0.8s infinite;
+  }
+
+  .message {
+    @apply flex;
+    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .message__bubble {
+    @apply flex max-w-[90%] rounded-xl p-[11px_14px] text-xs leading-[1.5] font-medium;
+  }
+
+  .message--assistant {
+    @apply justify-start;
+  }
+
+  .message--user {
+    @apply justify-end;
+  }
+
+  .message--assistant .message__bubble {
+    @apply text-[#D4D0C8];
+    border: 1px solid rgba(107, 191, 133, 0.2);
+    background: linear-gradient(
+      135deg,
+      rgba(107, 191, 133, 0.12),
+      rgba(82, 168, 114, 0.06)
+    );
+    box-shadow: 0 2px 8px rgba(107, 191, 133, 0.08);
+  }
+
+  .message--user .message__bubble {
+    @apply text-[#060A07];
+    background: linear-gradient(135deg, #6bbf85, #52a872);
+    box-shadow: 0 4px 16px rgba(107, 191, 133, 0.25);
+  }
+
+  .message__typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 8px 14px;
+    background: linear-gradient(
+      135deg,
+      rgba(107, 191, 133, 0.12),
+      rgba(82, 168, 114, 0.06)
+    );
+    border: 0.5px solid rgba(107, 191, 133, 0.2);
+    border-radius: 12px;
+    width: fit-content;
+  }
+
+  .message__typing-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #6bbf85;
+    animation: typing 1.4s infinite;
+  }
+
+  .message__typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .message__typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
   }
 }

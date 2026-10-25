@@ -16,7 +16,7 @@ const SOCIAL_ICONS: Record<string, ReactNode> = {
 
 const Footer = () => {
   return (
-    <footer id="contact">
+    <footer id="footer">
       <div className="flex justify-between px-[40px] pb-[40px]">
         <div>
           <div className="flex flex-col gap-2">

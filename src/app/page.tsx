@@ -17,6 +17,7 @@ import { CgNotes } from "react-icons/cg";
 import { MdOutlineSettings } from "react-icons/md";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaCalendarAlt } from "react-icons/fa";
+import Contact from "./sections/contact";
 
 export default function HomePage() {
   const [showAssistant, setShowAssistant] = useState(false);
@@ -48,6 +49,7 @@ export default function HomePage() {
             <Experience />
             <Projects />
             <Testimonials />
+            <Contact />
             <Footer />
           </HomeMain>
         </motion.main>
